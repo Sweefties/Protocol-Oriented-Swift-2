@@ -31,7 +31,7 @@ class MainTableViewController: UITableViewController {
             case .PersonType:
                 let cell = tableView.dequeueReusableCellWithIdentifier("SwitchInTextTableViewCell", forIndexPath: indexPath) as! SwitchInTextTableViewCell
                 
-                // this is where the magic happens!!
+                // this is where the magic happens!
                 let viewModel = PersonViewModel()
                 cell.configure(withDataSource: viewModel, delegate: viewModel)
                 return cell
