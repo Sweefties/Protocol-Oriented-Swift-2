@@ -17,9 +17,9 @@ extension PersonViewModel: SwitchInTextCellDelegate {
     
     func onSwitchTogleOn(on: Bool) {
         if on {
-            print("The Person are On!")
+            print("The Person switch On!")
         } else {
-            print("The Person went Off!")
+            print("The Person switch Off!")
         }
     }
     
