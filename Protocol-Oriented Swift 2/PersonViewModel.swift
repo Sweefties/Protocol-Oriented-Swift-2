@@ -24,6 +24,6 @@ extension PersonViewModel: SwitchInTextCellDelegate {
     }
     
     var switchColor: UIColor {
-        return .blueColor()
+        return .lightGrayColor()
     }
 }
