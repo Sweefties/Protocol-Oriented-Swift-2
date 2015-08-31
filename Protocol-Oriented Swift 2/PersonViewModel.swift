@@ -9,7 +9,7 @@
 import UIKit
 
 struct PersonViewModel: SwitchInTextCellDataSource {
-    var title = "Person Index"
+    var title = "Person Index."
     var switchOn = true
 }
 
