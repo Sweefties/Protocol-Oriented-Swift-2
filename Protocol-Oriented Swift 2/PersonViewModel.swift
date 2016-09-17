@@ -15,7 +15,7 @@ struct PersonViewModel: SwitchInTextCellDataSource {
 
 extension PersonViewModel: SwitchInTextCellDelegate {
     
-    func onSwitchTogleOn(on: Bool) {
+    func onSwitchTogleOn(_ on: Bool) {
         if on {
             print("The Person switch On!")
         } else {
@@ -24,6 +24,6 @@ extension PersonViewModel: SwitchInTextCellDelegate {
     }
     
     var switchColor: UIColor {
-        return .lightGrayColor()
+        return UIColor.lightGray
     }
 }

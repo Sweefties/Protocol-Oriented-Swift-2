@@ -11,7 +11,7 @@ import UIKit
 class MainTableViewController: UITableViewController {
 
     enum Person: Int {
-        case PersonType
+        case personType
         // other settings here
     }
     
@@ -22,15 +22,15 @@ class MainTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let person = Person(rawValue: indexPath.row) {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let person = Person(rawValue: (indexPath as NSIndexPath).row) {
             switch person {
-            case .PersonType:
-                let cell = tableView.dequeueReusableCellWithIdentifier("SwitchInTextTableViewCell", forIndexPath: indexPath) as! SwitchInTextTableViewCell
+            case .personType:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchInTextTableViewCell", for: indexPath) as! SwitchInTextTableViewCell
                 
                 // this is where the magic happens!
                 let viewModel = PersonViewModel()
@@ -40,7 +40,7 @@ class MainTableViewController: UITableViewController {
             
         }
         
-        return tableView.dequeueReusableCellWithIdentifier("defaultCell", forIndexPath: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
     }
 
 }
